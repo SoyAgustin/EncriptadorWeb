@@ -1,7 +1,4 @@
-header{
-    background-color: cornflowerblue;
-    padding: 20px 0; 
-}
+
 .simbolo-informacion{
     display: inline-block;
     background-color: #f0f0f0;
@@ -13,9 +10,4 @@ header{
     font-weight: bold;
     font-size: 14px;
     margin-right: 5px;
-}
-
-footer{
-    background-color: cornflowerblue;
-    padding: 20px 0; 
 }

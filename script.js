@@ -45,3 +45,18 @@ function decryptText(text){
     return text;
 }
 
+//Boton para encryptar texto
+function btnEncrypt(){
+    let text = document.getElementById("inputText").value;
+    let encryptedText = encryptText(text);
+    document.getElementById("outputText").value = encryptedText;
+}
+
+//Boton para desencryptar texto
+function btnDecrypt(){
+    let text = document.getElementById("inputText").value;
+    let decryptedText = decryptText(text);
+    document.getElementById("outputText").value = decryptedText;
+}
+
+
