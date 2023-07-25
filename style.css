@@ -1,3 +1,40 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background: hsla(9, 58%, 47%, 1);
+    background: hsla(195, 100%, 88%, 1);
+
+    background: radial-gradient(circle, hsla(195, 100%, 88%, 1) 0%, hsla(235, 100%, 98%, 1) 100%);
+
+    background: -moz-radial-gradient(circle, hsla(195, 100%, 88%, 1) 0%, hsla(235, 100%, 98%, 1) 100%);
+
+    background: -webkit-radial-gradient(circle, hsla(195, 100%, 88%, 1) 0%, hsla(235, 100%, 98%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#C3F0FF", endColorstr="#F4F5FF", GradientType=1 );
+    margin: 0;
+    padding: 0;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+header, main, footer{
+    display: block;
+    text-align: center;
+
+}
+
+/* Estilo para ocultar los márgenes del textarea en la inputArea */
+.inputArea textarea {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    border: none;
+    padding: 10px; /* Añadimos un poco de espacio interno para que el texto no quede demasiado pegado al borde */
+    resize: none; /* Evitamos que el usuario pueda redimensionar el textarea */
+    width: 30%; /* Ajustamos el ancho del textarea al 100% */
+    background:transparent;
+  }
 
 .simbolo-informacion{
     display: inline-block;

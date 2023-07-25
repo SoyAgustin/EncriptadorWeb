@@ -59,4 +59,20 @@ function btnDecrypt(){
     document.getElementById("outputText").value = decryptedText;
 }
 
+const inputText = document.getElementById('inputText');
+
+  // Al hacer clic en el textarea, eliminar el texto de la leyenda
+inputText.addEventListener('focus', function () {
+    if (this.value != '') {
+      this.value = '';
+    }
+  });
+
+  // Si el textarea está vacío al perder el foco, restaurar la leyenda
+inputText.addEventListener('blur', function () {
+    if (this.value === '') {
+      this.value = 'Ingrese el texto aquí';
+    }
+  });
+
 
