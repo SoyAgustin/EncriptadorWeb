@@ -21,11 +21,12 @@ body{
 header, main, footer{
     display: block;
     text-align: center;
+    margin-top: 5%;
 
 }
 
 /* Estilo para ocultar los márgenes del textarea en la inputArea */
-.inputArea textarea {
+.inputArea textarea ,.outputArea textarea{
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
     text-align: center;
