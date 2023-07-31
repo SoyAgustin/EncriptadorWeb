@@ -28,35 +28,69 @@ header, main, footer{
 }
 /* Header box: logo, titulo*/
 .header-box{
-    border: solid 1px #000;
     padding: 1%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .logo{
-    border: solid 1px #000;
     padding: 1%;
     margin: 0px;
 }
 .titulo{
-    border: solid 1px #000;
-    padding: 2%;
+    padding: 1em;
     margin: 0px;
+    font-weight: bold;
 }
 
 /* Main box: inputArea, outputArea*/
-
-/* Section: inputArea*/
-
-.inputTextBox{
-    border: solid 1px #000;
+.inputArea, .outputArea{
+    display:inline-block;
 }
+/* Section: inputArea*/
+.inputTextBox{
+    position: relative;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    margin: 0 auto; 
+    padding: 10px;
+}
+#inputText{
+    border: solid 0.5px blue;
+    border-radius: 10px;
+    background-color: transparent;
+    transition: background-color 0.5s ease;
+    padding: 1em;
+    resize: none;
+    width: 30vw;
+    height: 30vh;
+    text-align: center;
+    align-items: center;
+}
+#inputText.animating{
+    background-image: linear-gradient(to right,#ff9800, #f0f0f0);
+    background-size: 200% 100%;
+    animation: slideBackground 0.5s linear forwards;
+}
+@keyframes slideBackground{
+    0%{
+        background-position: 0% 0%;
+    }
+    100%{
+        background-position: -100% 0%;
+    }
+}
+
+
 
 /*InfoBox*/
 .infoBox{
     border: solid 1px #000;
     display: flex;
+    padding: 1%;
     justify-content: center;
+    align-items: center;
 }
 .symbolInfo{
     border: solid 1px #000;
@@ -90,5 +124,11 @@ header, main, footer{
 /* Section: outputArea*/
 
 .outputTextBox{
+    border: solid 1px #000;
+}
+.btnCopyBox{
+    border: solid 1px #000;
+}
+.btnCopy{
     border: solid 1px #000;
 }
