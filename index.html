@@ -13,25 +13,40 @@
 
     <body>
         <header>
-            <h1 class="logo"><img src="imagenes/Logo.svg" alt="Logo-Alura"></h1>
-            <h1 class="titulo">Oracle ONE: Challenge del encriptador</h1>
+            <div class="header-box">
+                <div class="logo">
+                    <h1><img src="imagenes/Logo.svg" alt="Logo-Alura"></h1>
+                </div>
+                <div class="titulo">
+                    <h1>Oracle ONE: Challenge del encriptador</h1>
+                </div>
+            </div>
         </header>
 
         <main>
             <section class="inputArea">
-        
-                <textarea id="inputText" >Ingrese el texto aqui</textarea>
-                
-                <div class="simbolo-informacion">i</div><p>Solo se admiten letras minúsculas y sin caracteres especiales</p>
+                <div class="inputTextBox">
+                    <textarea id="inputText" >Ingrese el texto aqui</textarea>
+                </div>
 
-                <input class="btnEncrypt" type="button" onclick="btnEncrypt()" value="Encriptar">
+                <div class="infoBox">
+                    <div class="symbolInfo">i</div> <p class="legendInfo">Solo se admiten letras minúsculas y sin caracteres especiales</p>
+                </div>
 
-                <input class="btnDecrypt" type="button" onclick="btnDecrypt()" value="Desencriptar">
-                
+                <div class="btnBox">
+                    <div class="btnEncrypt">
+                        <input type="button" onclick="btnEncrypt()" value="Encriptar">
+                    </div>
+                    <div class="btnDecrypt">
+                        <input type="button" onclick="btnDecrypt()" value="Desencriptar">
+                    </div>
+                </div>
             </section>
 
             <section class="outputArea">
-                <textarea id="outputText"></textarea>
+                <div class="outputTextBox">
+                    <textarea id="outputText"></textarea>
+                </div>
             </section>
 
         </main>
