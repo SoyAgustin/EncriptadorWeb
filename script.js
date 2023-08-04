@@ -76,7 +76,7 @@ inputText.addEventListener('blur', function () {
   });
 
 // Obtener el botón y el textarea con id "inputText"
-const btnEncryptEvent = document.querySelector('.btnEncrypt input');
+const btnEncryptEvent = document.querySelector('.btn');
 
 // Escuchar el evento click en el botón
 btnEncryptEvent.addEventListener('click', () => {

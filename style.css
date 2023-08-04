@@ -62,6 +62,9 @@ header, main, footer{
     height: 30vh;
     text-align: center;
 }
+#outputText{
+    pointer-events: none;
+}
 /* Section: inputArea*/
 
 #inputText.animating{
@@ -80,16 +83,20 @@ header, main, footer{
 /*InfoBox*/
 .infoBox{
     display: flex;
-    padding: 1%;
+    padding: 2%;
+    margin: 2%;
     justify-content: center;
     align-items: center;
+    font-weight: bold;
+    font-size: 13px;
 }
 .symbolInfo{
     background-color: #f0f0f0;
+    border: solid 0.2px blue;
     border-radius: 50%;
     padding: 5px;
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     text-align: center;
     font-weight: bold;
     font-size: 14px;
@@ -99,6 +106,28 @@ header, main, footer{
 .btnBox{
     display: flex;
     justify-content: center;
+    margin:0px;
 }
-/* Section: outputArea*/
+.btn{
+    background-color: deepskyblue;
+    color: white;
+    border: solid 0.5px blue;
+    border-radius: 10px;
+    font-size: 16px;
+    width: 12em;
+    height: 4em;
+    padding: 1px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 1.5s ease;
+}
+
+.btn:hover{
+    animation: bounceColor 1.5s ease infinite;
+}
+/*Animacion para rebotar el color de los botones*/
+@keyframes bounceColor{
+    0%,100%{background-color: deepskyblue;}
+    50%{background-color: cyan;}
+}
 
