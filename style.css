@@ -45,18 +45,13 @@ header, main, footer{
 
 /* Main box: inputArea, outputArea*/
 .inputArea, .outputArea{
-    display:inline-block;
-}
-/* Section: inputArea*/
-.inputTextBox{
-    position: relative;
-    display: flex;
+    display: inline-flex;
+    flex-direction: column; 
     align-items: center; 
-    justify-content: center; 
-    margin: 0 auto; 
-    padding: 10px;
+    justify-content: center;
+    margin: 2em auto;
 }
-#inputText{
+#inputText, #outputText {
     border: solid 0.5px blue;
     border-radius: 10px;
     background-color: transparent;
@@ -66,8 +61,9 @@ header, main, footer{
     width: 30vw;
     height: 30vh;
     text-align: center;
-    align-items: center;
 }
+/* Section: inputArea*/
+
 #inputText.animating{
     background-image: linear-gradient(to right,#ff9800, #f0f0f0);
     background-size: 200% 100%;
@@ -81,19 +77,14 @@ header, main, footer{
         background-position: -100% 0%;
     }
 }
-
-
-
 /*InfoBox*/
 .infoBox{
-    border: solid 1px #000;
     display: flex;
     padding: 1%;
     justify-content: center;
     align-items: center;
 }
 .symbolInfo{
-    border: solid 1px #000;
     background-color: #f0f0f0;
     border-radius: 50%;
     padding: 5px;
@@ -104,31 +95,10 @@ header, main, footer{
     font-size: 14px;
     margin-right: 5px;
 }
-.legendInfo{
-    border: solid 1px #000;
-}
-
 /*BtnBox*/
 .btnBox{
-    border: solid 1px #000;
     display: flex;
     justify-content: center;
 }
-.btnEncrypt{
-    border: solid 1px #000;
-}
-.btnDecrypt{
-    border: solid 1px #000;
-}
-
 /* Section: outputArea*/
 
-.outputTextBox{
-    border: solid 1px #000;
-}
-.btnCopyBox{
-    border: solid 1px #000;
-}
-.btnCopy{
-    border: solid 1px #000;
-}
