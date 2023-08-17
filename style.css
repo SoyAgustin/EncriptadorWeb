@@ -1,7 +1,7 @@
 body{
     /*border: solid 1px #000;*/
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 24px;
     background: hsla(9, 58%, 47%, 1);
     background: hsla(195, 100%, 88%, 1);
 
@@ -23,7 +23,7 @@ header, main, footer{
     /*border: solid 1px red;*/
     display: block;
     text-align: center;
-    margin-top: 1%;
+    margin-top: 0%;
 
 }
 /* Header box: logo, titulo*/
@@ -49,7 +49,7 @@ header, main, footer{
     flex-direction: column; 
     align-items: center; 
     justify-content: center;
-    margin: 1em auto;
+    margin: 2em auto;
 }
 #inputText, #outputText {
     border: solid 0.5px blue;
@@ -61,6 +61,7 @@ header, main, footer{
     width: 30vw;
     height: 30vh;
     text-align: center;
+    font-size: 1em;
 }
 #outputText{
     pointer-events: none;
@@ -111,7 +112,7 @@ header, main, footer{
     height: 10px;
     text-align: center;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 0.7em;
     margin-right: 5px;
 }
 /*BtnBox*/
@@ -126,8 +127,8 @@ header, main, footer{
     border: solid 0.5px blue;
     border-radius: 10px;
     font-size: 0.8em;
-    width: 10em;
-    height: 3em;
+    width: 12em;
+    height: 3.5em;
     padding: 1px;
     margin: 5px;
     cursor: pointer;
@@ -141,5 +142,10 @@ header, main, footer{
 @keyframes bounceColor{
     0%,100%{background-color: deepskyblue;}
     50%{background-color: cyan;}
+}
+
+footer{
+    padding: 0.3em;
+    margin: 0.3em;
 }
 
