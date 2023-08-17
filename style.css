@@ -65,21 +65,33 @@ header, main, footer{
 #outputText{
     pointer-events: none;
 }
-/* Section: inputArea*/
 
-#inputText.animating{
-    background-image: linear-gradient(to right,#ff9800, #f0f0f0);
-    background-size: 200% 100%;
-    animation: slideBackground 0.5s linear forwards;
+/*Animacion de color para las áreas de texto
+----------------------------------------------*/
+.animate-background-plus{
+    background: radial-gradient(circle, #ffa939 10%, transparent 70%);
+    animation: animateColor-plus 1s forwards;
 }
-@keyframes slideBackground{
-    0%{
-        background-position: 0% 0%;
+@keyframes animateColor-plus{
+    0% {
+        background-color: transparent;
     }
-    100%{
-        background-position: -100% 0%;
+    100% {
+        background-color: #ffa939;
     }
 }
+.animate-background-minus{
+    animation: animateColor-minus 1s forwards;
+}
+@keyframes animateColor-minus {
+    0% {
+        background-color: #ffa939;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+/*----------------------------------------------*/
 /*InfoBox*/
 .infoBox{
     display: flex;

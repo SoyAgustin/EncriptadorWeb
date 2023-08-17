@@ -59,41 +59,38 @@ function btnDecrypt(){
     document.getElementById("outputText").value = decryptedText;
 }
 
-const inputText = document.getElementById('inputText');
-
-  // Al hacer clic en el textarea, eliminar el texto de la leyenda
-inputText.addEventListener('focus', function () {
-    if (this.value != '') {
-      this.value = '';
-    }
-  });
-
-  // Si el textarea está vacío al perder el foco, restaurar la leyenda
-inputText.addEventListener('blur', function () {
-    if (this.value === '') {
-      this.value = 'Ingrese el texto aquí';
-    }
-  });
-
 // Obtener el botón y el textarea con id "inputText"
-const btnEncryptEvent = document.querySelector('.btn');
+const btnEncryptAnimation = document.getElementById('btnEncrypt');
+const btnDecryptAnimation = document.getElementById('btnDecrypt');
+const btnCopyAnimation = document.getElementById('btnCopy');
+const inputText = document.getElementById('inputText');
+const outputText = document.getElementById('outputText');
 
-// Escuchar el evento click en el botón
-btnEncryptEvent.addEventListener('click', () => {
-    // Agregar clase 'animating' al textarea
-    inputText.classList.add('animating');
-    inputText.value = 'Encriptando...';
-    // Retirar la clase 'animating' después de un breve retraso (2 segundos en este caso)
-    setTimeout(() => {
-        inputText.classList.remove('animating');
-    }, 500);
-});
+function animationTextAreas(button, textArea){
 
-function showEncriptedMessage() {
-    inputText.value = "Encriptado";
+    button.addEventListener('click', () => {
+
+        if(textArea.value !==""){
+        textArea.classList.add('animate-background-plus');
+        
+        setTimeout(() => {
+            textArea.classList.remove('animate-background-plus');
+            textArea.classList.add('animate-background-minus');
+        }, 1000);
+    
+        
+    
+       setTimeout(() => {
+        textArea.classList.remove('animate-background-minus');
+    }, 2000);
+    }
+    });
+    
 }
-inputText.addEventListener('animationend', showEncriptedMessage);
 
+animationTextAreas(btnEncryptAnimation, inputText);
+animationTextAreas(btnDecryptAnimation, inputText);
+animationTextAreas(btnCopyAnimation, outputText);
 
 
 
