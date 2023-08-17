@@ -44,25 +44,45 @@ function decryptText(text){
 
     return text;
 }
-
+//Funcion para validar que no se ingresen caracteres especiales
+//se retorna true si se encuentra un caracter especial
+function specialSymbol(texto) {
+    // Expresión regular para buscar letras mayúsculas o caracteres especiales
+    const regex = /[A-Z!@#$%^&*()_+{}\[\]:;<>,.?~\/\\|-]/;
+  
+    return regex.test(texto);// Devuelve true o false
+  }
 //Funcion para el botón copiar texto al portapapeles
 function btnCopy(){
     let text = document.getElementById("outputText").value;
     navigator.clipboard.writeText(text);
 }
 
+//Objeto para obtener el input de texto
+const inputBox = document.getElementById("inputText");
+
 //Boton para encryptar texto
 function btnEncrypt(){
-    let text = document.getElementById("inputText").value;
+    if(!specialSymbol(inputBox.value)){
+    let text = inputBox.value;
     let encryptedText = encryptText(text);
     document.getElementById("outputText").value = encryptedText;
+    } else {
+        alert("No se permiten mayúsculas o caracteres especiales");
+        inputBox.value = "";
+    }
 }
 
 //Boton para desencryptar texto
 function btnDecrypt(){
+    if(!specialSymbol(inputBox.value)){
     let text = document.getElementById("inputText").value;
     let decryptedText = decryptText(text);
     document.getElementById("outputText").value = decryptedText;
+    } else {
+        alert("No se permiten mayúsculas o caracteres especiales");
+        inputBox.value = "";
+    }
 }
 
 
@@ -77,7 +97,7 @@ const outputText = document.getElementById('outputText');
 function animationTextAreas(button, textArea){
 
     button.addEventListener('click', () => {
-
+        //si el textarea no esta vacio
         if(textArea.value !==""){
         textArea.classList.add('animate-background-plus');
         
