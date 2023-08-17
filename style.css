@@ -23,7 +23,7 @@ header, main, footer{
     /*border: solid 1px red;*/
     display: block;
     text-align: center;
-    margin-top: 5%;
+    margin-top: 1%;
 
 }
 /* Header box: logo, titulo*/
@@ -38,7 +38,7 @@ header, main, footer{
     margin: 0px;
 }
 .titulo{
-    padding: 1em;
+    padding: 1%;
     margin: 0px;
     font-weight: bold;
 }
@@ -49,7 +49,7 @@ header, main, footer{
     flex-direction: column; 
     align-items: center; 
     justify-content: center;
-    margin: 2em auto;
+    margin: 1em auto;
 }
 #inputText, #outputText {
     border: solid 0.5px blue;
@@ -100,7 +100,7 @@ header, main, footer{
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    font-size: 13px;
+    font-size: 0.7em;
 }
 .symbolInfo{
     background-color: #f0f0f0;
@@ -125,9 +125,9 @@ header, main, footer{
     color: white;
     border: solid 0.5px blue;
     border-radius: 10px;
-    font-size: 16px;
-    width: 12em;
-    height: 4em;
+    font-size: 0.8em;
+    width: 10em;
+    height: 3em;
     padding: 1px;
     margin: 5px;
     cursor: pointer;

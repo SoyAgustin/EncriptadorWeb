@@ -45,6 +45,12 @@ function decryptText(text){
     return text;
 }
 
+//Funcion para el botón copiar texto al portapapeles
+function btnCopy(){
+    let text = document.getElementById("outputText").value;
+    navigator.clipboard.writeText(text);
+}
+
 //Boton para encryptar texto
 function btnEncrypt(){
     let text = document.getElementById("inputText").value;
@@ -59,6 +65,7 @@ function btnDecrypt(){
     document.getElementById("outputText").value = decryptedText;
 }
 
+
 // Obtener el botón y el textarea con id "inputText"
 const btnEncryptAnimation = document.getElementById('btnEncrypt');
 const btnDecryptAnimation = document.getElementById('btnDecrypt');
@@ -66,6 +73,7 @@ const btnCopyAnimation = document.getElementById('btnCopy');
 const inputText = document.getElementById('inputText');
 const outputText = document.getElementById('outputText');
 
+// Funcion para animar las areas de texto
 function animationTextAreas(button, textArea){
 
     button.addEventListener('click', () => {
@@ -88,6 +96,7 @@ function animationTextAreas(button, textArea){
     
 }
 
+// Llamar a la funcion para animar las areas de texto
 animationTextAreas(btnEncryptAnimation, inputText);
 animationTextAreas(btnDecryptAnimation, inputText);
 animationTextAreas(btnCopyAnimation, outputText);
