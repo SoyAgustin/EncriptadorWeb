@@ -86,7 +86,7 @@ function btnDecrypt(){
 }
 
 
-// Obtener el botón y el textarea con id "inputText"
+// Obtener el botones y textareas por id
 const btnEncryptAnimation = document.getElementById('btnEncrypt');
 const btnDecryptAnimation = document.getElementById('btnDecrypt');
 const btnCopyAnimation = document.getElementById('btnCopy');
