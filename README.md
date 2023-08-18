@@ -10,10 +10,15 @@ Se implementaron metodologías de código limpio, buenas prácticas y en el caso
 El encriptador de texto hace un mapeo sencillo de las vocales de una cadena de texto de la siguiente forma:
 
 `La letra "e" es convertida para "enter"`
+
 `La letra "i" es convertida para "imes"`
+
 `La letra "a" es convertida para "ai"`
+
 `La letra "o" es convertida para "ober"`
+
 `La letra "u" es convertida para "ufat"`
+
 Una regla adicional es que el encriptador solo debía recibir cadenas con letras minúsculas de la `a` a la `z` sin caracteres especiales.
 ## ¿Cómo se superó el challenge?
 ### Encriptado
